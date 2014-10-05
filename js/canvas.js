@@ -60,12 +60,18 @@
     context.beginPath();
     // Drawing circle/arc of 360degree with arc method.
     context.arc(75, 75, 70, 0, Math.PI / 180 * 360, true);
-    context.moveTo(125, 75);
+    context.stroke();
+
+    context.beginPath();
     // Drawing circle/arc of 180degree with arc method.
     context.arc(75, 75, 50, 0, Math.PI / 180 * 180, false);
-    context.moveTo(55, 60);
+    context.stroke();
+
+    context.beginPath();
     context.arc(50, 60, 5, 0, Math.PI / 180 * 360, true);
-    context.moveTo(105, 60);
+    context.stroke();
+
+    context.beginPath();
     context.arc(100, 60, 5, 0, Math.PI / 180 * 360, true);
     context.stroke();
   }
