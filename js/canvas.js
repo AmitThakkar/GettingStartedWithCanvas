@@ -7,6 +7,7 @@
     if (canvas.getContext) {
       drawIntersectingRectangles();
       drawVerticalRectangles();
+      drawTriangle();
     } else {
       // Canvas unsupported code will go here.
     }
@@ -34,6 +35,22 @@
     context.clearRect(45, 45, 60, 60);
     // Drawing Rectangle outline inside the specific clear area.
     context.strokeRect(50, 50, 50, 50);
+  }
+
+  function drawTriangle() {
+    var canvas = document.getElementById('triangle');
+    var context = canvas.getContext('2d');
+    // Creating New Path
+    context.beginPath();
+    // Moving to a point, by default point is on (0,0)
+    context.moveTo(60, 60);
+    // Drawing line from (60, 60) to (60, 100)
+    context.lineTo(60, 100);
+    // Drawing line from (60, 100) to (100, 80)
+    context.lineTo(100, 80);
+    // filling diagram with fill() method, so no need to close the path
+    // fill() method automatically close the path
+    context.fill();
   }
 
   window.onload = draw;
